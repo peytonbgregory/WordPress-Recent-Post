@@ -2,7 +2,7 @@
 // Post query variables. Use lines 4-9 to control what content is displayed in the query.
 $args = array(
     'post_type'    => 'post', // To show custom post types or products, change the word post to the name of the custom post type (providers, locations, projects, products...)
-    'category_name' => 'staff' // use this to show posts within a certain category. remove the code to dispaky all posts.
+    // 'category_name' => 'staff' // use this to show posts within a certain category. remove the code to dispaky all posts.
     'orderby'        => 'name',
     'order'          => 'ASC',
     'hide_empty'     => 1, // 1 is true / 0 is false
