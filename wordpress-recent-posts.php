@@ -25,9 +25,13 @@ $the_query = new WP_Query( $args ); ?>
 
 
 
-    <h2 clas="post-title"><?php the_title(); // this will show the post title ?></h2>
+    <h2 clas="post-title add-your-own-class-here"><?php the_title(); // this will show the post title ?></h2>
 
-    <div class="entry-content">
+   <?php  if ( has_post_thumbnail() ) { // if the post has a featured image then.....
+    the_post_thumbnail( 'thumbnail', array( 'class' => 'alignleft img-fluid add-your-own-class-here' ) ); // show the featured image. The first field controls the image size. thumbnail is the smallest. Other options are 'medium', 'large', 'full', or custom image sizes can be created
+    } ?>
+    
+    <div class="entry-content add-your-own-class-here">
 
         <?php the_content(); // this will show all of the post content ?>
 
@@ -35,7 +39,7 @@ $the_query = new WP_Query( $args ); ?>
 
     </div>
 
-    <a class="btn btn-primary" href="<?php the_permalink(); // displays the post URL ?>">Ream Nore </a>
+    <a class="btn btn-primary add-your-own-class-here" href="<?php the_permalink(); // displays the post URL ?>">Ream Nore </a>
 
     <?php endwhile; ?>
     <!-- end of the loop -->
